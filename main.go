@@ -7,8 +7,10 @@ import (
 	"tgrziminiar/concurrent-api/google"
 	"tgrziminiar/concurrent-api/pingpong"
 	quitsignal "tgrziminiar/concurrent-api/quit-signal"
+	ringbuffer "tgrziminiar/concurrent-api/ring-buffer"
 	"tgrziminiar/concurrent-api/samplebuffer"
 	"tgrziminiar/concurrent-api/timeout"
+	workerpool "tgrziminiar/concurrent-api/worker-pool"
 )
 
 func main() {
@@ -35,6 +37,10 @@ func main() {
 		google.Run3()
 	case "pingpong":
 		pingpong.Run()
+	case "ring-buffer":
+		ringbuffer.Run()
+	case "worker-pool":
+		workerpool.Run()
 
 	default:
 		log.Fatal("Argument is required write some package name to run")

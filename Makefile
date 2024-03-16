@@ -23,3 +23,7 @@ g3:
 pp:
 	go run main.go pingpong
 
+rb:
+	go run main.go ring-buffer
+wp:
+	go run main.go worker-pool
